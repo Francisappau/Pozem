@@ -1,25 +1,22 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pozem</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-    <%= yield(:head) %>
-  </head>
-  <body class="main-body">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pozem</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= yield(:head) %>
+</head>
+<body class="main-body">
   <%= render partial: "layouts/rails_environment" %>
    <%= render 'layouts/navigation' %>   
     <div class="main">
-
-          <%= yield %> <!-- render post -->
-       
+      <%= yield %> <!-- render post -->     
     </div>
-    <footer>
-    </footer>
-  </body>
+  <footer></footer>
+</body>
 </html>

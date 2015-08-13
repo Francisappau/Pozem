@@ -1,5 +1,5 @@
 <%= form_for [@post, @comment], remote: true do |f| %>
-<%= render 'shared/errors', obj: @comment %>
+  <%= render 'shared/errors', obj: @comment %>
   <div class="comment-form field">
     <%= f.bootsy_area :body, placeholder: "Comment here", class:'comment-form', editor_options: {color:false, font_styles:false, lists: false} %>
   </div>

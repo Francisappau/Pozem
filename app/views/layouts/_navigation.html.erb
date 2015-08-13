@@ -10,16 +10,12 @@
       </button>
        <%= link_to "Pozem", root_path, class:'navbar-brand' %>
     </div>
-
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="#">Link</a></li>
       </ul>
-
       <%= render 'posts/searchform' %> 
-
-
       <% if user_signed_in? %>
       <ul class="nav navbar-nav navbar-right">
         <li class="profile-photo"><%= image_tag current_user.gravatar_url %></li>
@@ -32,12 +28,10 @@
           </ul>
         </li>
       </ul>
-
- <!-- Button trigger modal -->
+     <!-- Button trigger modal -->
       <button type="button" class="new-post-modal-btn btn btn-primary btn-sm" data-toggle="modal" data-target="#new-post-modal">
         Create Post
-      </button>
-      
+      </button>     
        <% else %>
        <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Sign Up", new_user_registration_path, class: "active" %></li>

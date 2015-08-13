@@ -23,7 +23,7 @@
     </div>
 
     <div class="row">
-        <table class="profile">
+      <table class="profile">
         <tbody>
           <tr>
             <td><%= image_tag current_user.gravatar_url %></td>
@@ -32,13 +32,13 @@
               <p class="time lobster">11:19 am</p>
             </td>
           </tr>
-          </tbody>
-        </table>
+        </tbody>
+      </table>
     </div><!-- gravatar tags and edit -->
           
     <div class="title row">
       <p class="lobster">
-      <%= link_to @post.title.capitalize, @post, class:'post-title' %>
+        <%= link_to @post.title.capitalize, @post, class:'post-title' %>
       </p>
     </div><!--  post title -->
 
@@ -47,7 +47,7 @@
     </div><!-- image row -->
 
     <div class="row">
-    <div class="post-show-text-body"><%= @post.body.html_safe %></div>
+      <div class="post-show-text-body"><%= @post.body.html_safe %></div>
     </div><!--  post text body -->
           
     <div class="c-s-l row">
@@ -59,42 +59,39 @@
         <ul class="comment dropdown-menu" role="menu">
           <li data-toggle="modal" data-target="#myModal">
           <div class="row">
-          <table>
-            <tbody>
-              <tr>
-                <td class="comment-gravatar">
-                 <%= image_tag current_user.gravatar_url %>
-                </td>
-                <td class="lobster">
-                Isaac Agutey
-                </td>
-              </tr>
-              <tr>
-              <td colspan="2">
-              <%= render 'comments/commentform'%>
-                </td>
-              </tr>
-            </tbody>
-          </table>  
+            <table>
+              <tbody>
+                <tr>
+                  <td class="comment-gravatar">
+                   <%= image_tag current_user.gravatar_url %>
+                  </td>
+                  <td class="lobster">
+                  Isaac Agutey
+                  </td>
+                </tr>
+                <tr>
+                <td colspan="2">
+                <%= render 'comments/commentform'%>
+                  </td>
+                </tr>
+              </tbody>
+            </table> 
+          </div> 
           </li>        
         </ul> 
+       </div>
       </div>
     </div>
-
-    <div class="share col-xs-4 col-md-4 col-sm-4 col-lg-4"><p class="share lobster"><i class="fa fa-share-alt"></i> Share</p>
-    </div>
-
-    <div class="like col-xs-4 col-md-4 col-sm-4 col-lg-4"><p class="like lobster"><i class="fa fa-thumbs-up"></i> Like</p></div>
-    </div><!-- like, comment, share -->
-          
+    <div class="share col-xs-4 col-md-4 col-sm-4 col-lg-4"><p class="share lobster"><i class="fa fa-share-alt"></i> Share</p></div>
+    <div class="like col-xs-4 col-md-4 col-sm-4 col-lg-4"><p class="like lobster"><i class="fa fa-thumbs-up"></i> Like</p></div><!-- like, comment, share -->        
     <div class="comments-show row">        
        <div class="main-comment row">
           <table>
            <tbody id="<%=dom_id(@post)%>">
-              <%= render @comment %>      
+             <%= render @comment %>      
            </tbody>       
-        </table>      
+          </table>      
        </div><!--  main-comment-row -->
     </div><!--comments-show-row -->
-  </div><!-- main-post row -->
-</div>      
+  </div><!-- main-post row -->    
+</div>
